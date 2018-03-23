@@ -127,9 +127,9 @@
 
 
 
-
 \date{}
 \author{\large Micha\l{} Burdukiewicz\inst{1}, Przemys\l{}aw Gagat\inst{1}, S\l{}awomir Jab\l{}o\n{}ski\inst{2}, \underline{Jaros\l{}aw Chilimoniuk}\inst{1}, Micha\l{} Gaworski\inst{2}, \\ Pawe\l{} Mackiewicz\inst{1} and Marcin \L{}ukaszewicz\inst{2}*\\
+\smallskip
 \normaltext{*marcin.lukaszewicz@uwr.edu.pl}}
 \institute{\small{\textsuperscript{1}University of Wroc\l{}aw, Department of Genomics,
 \textsuperscript{2}University of Wroc\l{}aw, Department of Biotransformation
@@ -138,7 +138,8 @@
 
 %Computational and experimental validation of amyloid databases
 %Problems with annotation and computational prediction of peptide amyloidogenicity
-\title{\huge PhyMet^2$: complex database containing records on methanogens with unique feature (MethanoGram) allowing prediction of culture conditions based on 16S rRNA.}
+\title{\huge PhyMet^2$: complex database containing records on methanogens with unique feature (MethanoGram) allowing prediction of culture conditions based on 16S rRNA}
+
 
 \begin{frame}
 \begin{columns}
@@ -163,7 +164,7 @@ PhyMet2 contains 153 manually curated and up-to-date high quality records of met
 
 \begin{block}{PhyMet^2$ as multifunctional platform}
 \begin{figure}
-\includegraphics[width=0.8\columnwidth]{Figure1.eps}
+\includegraphics[width=0.95\columnwidth]{Figure1.eps}
 \end{figure}
 
 % \begin{knitrout}
@@ -177,9 +178,8 @@ PhyMet2 contains 153 manually curated and up-to-date high quality records of met
 % 
 % \end{knitrout}
 
-PhyMet$^2$ (Phylogeny and Metabolism of Methanogens) is the largest data analysis platform that provides information on culturing conditions and sequence data for methanogenic archaea with a user-friendly interface and a set of tools for interactive data browsing using methanogens species names, taxonomy, culturing conditions, environmental/phenotype features and nucleotide/protein sequences. The analyses include advanced data browsing, exploring phylogeny, plotting selected features, searching for potential sequence homologues and predicting key culturing conditions for newly discovered methanogens based on 16S rRNA sequences. The database contains 153 methanogens characterized by ∼50 features organized into 13 categories, 88 complete genomes, ∼200,000 protein coding nucleotide/amino-acid sequences, and ∼1,200 rRNA and ∼4,100 tRNA sequences.
+PhyMet$^2$ (Phylogeny and Metabolism of Methanogens) is the largest data analysis platform that provides information on culturing conditions and sequence data for methanogenic archaea with a user-friendly interface. The analyses include advanced data browsing, exploring phylogeny, plotting selected features, searching for potential sequence homologues and predicting key culturing conditions for newly discovered methanogens based on 16S rRNA sequences.
 
-% PhyMet^2$ is a multifunctional platform that allows for various analyses using methanogens species names, taxonomy, culturing conditions, environmental/phenotype features and nucleotide/protein sequences. The analyses include advanced data browsing, exploring phylogeny, plotting selected features, searching for potential sequence homologues and predicting key culturing conditions for newly discovered methanogens based on 16S rRNA sequences. The database contains 153 methanogens characterized by ∼50 features organized into 13 categories, 88 complete genomes, ∼200,000 protein coding nucleotide/amino-acid sequences, and ∼1,200 rRNA and ∼4,100 tRNA sequences.
 
 % \normalsize	
 % \bigskip
@@ -268,7 +268,7 @@ In order to train MethanoGram, we used n-grams, i.e. subsequences of the length 
 
 
 To estimate the culturing conditions we chose the random forests algorithm because of its high performance
-and resistance to over-fitting\citep{breiman_random_2001}. They were implemented in the ranger R package\citep{wright_ranger:_2015}. In order to find the optimal values of hyperparameters, we performed a nested cross-validation of random forest classifiers.
+and resistance to over-fitting. In order to find the optimal values of hyperparameters, we performed a nested cross-validation of random forest classifiers.
 
 \end{block}
 % \vfill
@@ -517,6 +517,7 @@ ggplot(p, aes(x = type, y = error, fill = type, label = nice_label)) +
 % 
 % \end{knitrout}
 
+What is null model and ()
 
 
 \end{block}
@@ -530,8 +531,8 @@ PhyMet$^2$ is avaible at: \url{http://metanogen.biotech.uni.wroc.pl/}.
 \bigskip
 
 MethanoGram is avaible as a web-server: \url{http://www.smorfland.uni.wroc.pl/shiny/mgp/}.\\
+% \vfill
 
-\vfill
 \small{This work was supported by the Leading National Research Center (KNOW) and the National Science Centre grant no. 2015/17/N/NZ2/01845 and 2017/24/T/NZ2/00003.}
 
 \end{block}
