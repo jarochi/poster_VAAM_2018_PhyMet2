@@ -156,7 +156,7 @@ Methanogens are methane-producing anaerobic archaea, that can be found in many a
 
 \begin{block}{Data collection}
 
-PhyMet2 contains 153 manually curated and up-to-date high quality records of methanogenic species. Sequence data was collected from the NCBI (www.ncbi.nlm.nih.gov) and Silva (www.arb-silva.de) databases, and additional information, according to the minimal standards \citep{boone_proposal_1988}, was obtained by thorough manual search of literature.
+PhyMet2 contains 153 manually curated and up-to-date high quality records of methanogenic species. Sequence data was collected from the NCBI (www.ncbi.nlm.nih.gov) and Silva (www.arb-silva.de) databases, and additional information, according to the minimal standards, was obtained by thorough manual search of literature.
 %\includegraphics[width=0.87\columnwidth]{static_figure/ngram_scheme_poster.eps}
 
 \end{block}
@@ -260,15 +260,14 @@ From metagenomics analyses, we know that there is a plethora of new uncultivated
 
 \begin{block}{Tuning of MethanoGram}
 
-In order to train MethanoGram, we used n-grams, i.e. subsequences of the length n that were extracted from 16S rRNA. We chose only those species that have known 16S rRNA as well as all important culturing conditions. The final set included 67 methanogens.
+In order to train MethanoGram, we used n-grams, i.e. subsequences of the length n that were extracted from 16S rRNA. We chose only those species that have known 16S rRNA as well as all important culturing conditions. 
 
 \begin{figure}
 \includegraphics[width=0.7\columnwidth]{suplem2.eps}
 \end{figure}
 
 
-To estimate the culturing conditions we chose the random forests algorithm because of its high performance
-and resistance to over-fitting. In order to find the optimal values of hyperparameters, we performed a nested cross-validation of random forest classifiers.
+To estimate the culturing conditions we implemented random forests algorithmand performed a nested cross-validation.
 
 \end{block}
 % \vfill
