@@ -97,7 +97,7 @@
 \setbeamertemplate{caption}{\insertcaption} 
 \setbeamertemplate{navigation symbols}{}
 \setbeamercovered{transparent}
-\setbeamercolor{block title}{fg=red5,bg=red1}
+\setbeamercolor{block title}{fg=white,bg=magenta}
 \setbeamercolor{block body}{fg=black,bg=white}
 \setbeamercolor{local structure}{fg=darkred}
 
@@ -516,7 +516,7 @@ ggplot(p, aes(x = type, y = error, fill = type, label = nice_label)) +
 % 
 % \end{knitrout}
 
-What is null model and ()
+Null model does not incorporate any sequence-based information.
 
 
 \end{block}
