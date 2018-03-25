@@ -150,7 +150,7 @@
 {
 \begin{block}{Introduction}
 
-Methanogens are methane-producing anaerobic archaea, that can be found in many anaerobic habitats. They are recognized as the largest biogenic source of methane, which is a potent greenhouse gas, and consequently as an important factor in the global carbon cycle. They also show growing potential for biotechnological uses. Our rudimentary knowledge about them results from difficulties with their isolation and culturing in laboratory conditions, which are necessary to describe their phenotype. Innovations in DNA sequencing technologies allowed for rapid development of metagenomics. DNA sequencing of environmental samples resulted in identifying a plethora of new uncultivated methanogens. Therefore, we created PhyMet^2$ , the first database that combines description of methanogens and their culturing conditions with genetic information.
+Methanogens are methane-producing anaerobic archaea, that can be found in many anaerobic habitats. They are recognized as the largest biogenic source of methane, which is a potent greenhouse gas, and consequently as an important factor in the global carbon cycle. They also show growing potential for biotechnological uses. Our rudimentary knowledge about them results from difficulties with their isolation and culturing in laboratory conditions, which are necessary to describe their phenotype. Innovations in DNA sequencing technologies allowed for rapid development of metagenomics. DNA sequencing of environmental samples resulted in identifying a plethora of new uncultivated methanogens. Therefore, we created PhyMet^2$, the first database that combines description of methanogens and their culturing conditions with genetic information.
 
 \end{block}
 
@@ -229,7 +229,18 @@ PhyMet$^2$ (Phylogeny and Metabolism of Methanogens) is the largest data analysi
 % 
 % \end{knitrout}
 
-From metagenomics analyses, we know that there is a plethora of new uncultivated microorganisms, including methanogens. Unfortunately, we can often cultivate much less species than actually occur in a given environment.\\ The data contained in PhyMet2 was used to develop a web server, MethanoGram, that quickly and accurately predicts the conditions for optimal growth of methanogens: temperature, pH, and NaCl concentration, i.e. the key factors that shape the composition of methanogenic communities.
+% From metagenomics analyses, we know that there is a plethora of new uncultivated microorganisms, including methanogens. Unfortunately, we can often cultivate much less species than actually occur in a given environment.\\ 
+The data contained in PhyMet2 was used to develop a web server, MethanoGram, that quickly and accurately predicts the conditions for optimal growth of methanogens: temperature, pH, and NaCl concentration, i.e. the key factors that shape the composition of methanogenic communities.\\
+MethanoGram is able to estimate:
+
+
+\begin{itemize}
+\item{growth doubling time} 
+\item{optimal growth temperature}
+\item{optimal growth pH}
+\item{optimal growth NaCl}
+\end{itemize}
+
 
 % Therefore we have created MethanoGramm which is one of first approches to predict culturing conditions of methanogens.
 
@@ -263,11 +274,11 @@ From metagenomics analyses, we know that there is a plethora of new uncultivated
 In order to train MethanoGram, we used n-grams, i.e. subsequences of the length n that were extracted from 16S rRNA. We chose only those species that have known 16S rRNA as well as all important culturing conditions. 
 
 \begin{figure}
-\includegraphics[width=0.7\columnwidth]{suplem2.eps}
+\includegraphics[width=0.8\columnwidth]{suplem2.eps}
 \end{figure}
 
 
-To estimate the culturing conditions we implemented random forests algorithmand performed a nested cross-validation.
+To estimate the culturing conditions we implemented random forests algorithm and performed a nested cross-validation.
 
 \end{block}
 % \vfill
@@ -516,7 +527,8 @@ ggplot(p, aes(x = type, y = error, fill = type, label = nice_label)) +
 % 
 % \end{knitrout}
 
-Null model does not incorporate any sequence-based information.
+Null model does not incorporate any sequence-based information. \\
+Values above bars represent mean error of algorithm, below show mean errors of the best predictors found in the nested cross-validation.
 
 
 \end{block}
