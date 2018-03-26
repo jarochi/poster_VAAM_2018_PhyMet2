@@ -91,6 +91,7 @@
 \definecolor{red3}{RGB}{252,141,89}
 \definecolor{red4}{RGB}{227,74,51}
 \definecolor{red5}{RGB}{179,0,0}
+\definecolor{MethanoGram}{RGB}{199, 55, 163}
 \usecolortheme{seagull}
 \useinnertheme{rectangles}
 \setbeamercolor{item projected}{bg=darkred}
@@ -98,7 +99,7 @@
 \setbeamertemplate{caption}{\insertcaption} 
 \setbeamertemplate{navigation symbols}{}
 \setbeamercovered{transparent}
-\setbeamercolor{block title}{fg=white,bg=magenta}
+\setbeamercolor{block title}{fg=white,bg=MethanoGram}
 \setbeamercolor{block body}{fg=black,bg=white}
 \setbeamercolor{local structure}{fg=darkred}
 
