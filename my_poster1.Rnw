@@ -562,6 +562,8 @@ The exact details on training of MethanoGram are accessible at: \url{https://git
 
 
 \small{This work was supported by the Leading National Research Center (KNOW) and the National Science Centre grant no. 2015/17/N/NZ2/01845 and 2017/24/T/NZ2/00003.}
+\nocite{jablonski_methanogenic_2015}
+
 
 \end{block}
 \vfill

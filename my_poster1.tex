@@ -53,6 +53,7 @@
 \usepackage{color}
 \usepackage{amsmath}
 \usepackage{epstopdf}
+\usepackage{multicol}
 %% maxwidth is the original width if it is less than linewidth
 %% otherwise use linewidth (to make sure the graphics do not exceed the margin)
 \makeatletter
@@ -140,6 +141,7 @@
 \definecolor{red3}{RGB}{252,141,89}
 \definecolor{red4}{RGB}{227,74,51}
 \definecolor{red5}{RGB}{179,0,0}
+\definecolor{MethanoGram}{RGB}{199, 55, 163}
 \usecolortheme{seagull}
 \useinnertheme{rectangles}
 \setbeamercolor{item projected}{bg=darkred}
@@ -147,7 +149,7 @@
 \setbeamertemplate{caption}{\insertcaption} 
 \setbeamertemplate{navigation symbols}{}
 \setbeamercovered{transparent}
-\setbeamercolor{block title}{fg=red5,bg=red1}
+\setbeamercolor{block title}{fg=white,bg=MethanoGram}
 \setbeamercolor{block body}{fg=black,bg=white}
 \setbeamercolor{local structure}{fg=darkred}
 
@@ -178,9 +180,9 @@
 
 
 
-
 \date{}
 \author{\large Micha\l{} Burdukiewicz\inst{1}, Przemys\l{}aw Gagat\inst{1}, S\l{}awomir Jab\l{}o\n{}ski\inst{2}, \underline{Jaros\l{}aw Chilimoniuk}\inst{1}, Micha\l{} Gaworski\inst{2}, \\ Pawe\l{} Mackiewicz\inst{1} and Marcin \L{}ukaszewicz\inst{2}*\\
+\smallskip
 \normaltext{*marcin.lukaszewicz@uwr.edu.pl}}
 \institute{\small{\textsuperscript{1}University of Wroc\l{}aw, Department of Genomics,
 \textsuperscript{2}University of Wroc\l{}aw, Department of Biotransformation
@@ -189,7 +191,8 @@
 
 %Computational and experimental validation of amyloid databases
 %Problems with annotation and computational prediction of peptide amyloidogenicity
-\title{\huge PhyMet^2$: complex database containing records on methanogens with unique feature (MethanoGram) allowing prediction of culture conditions based on 16S rRNA.}
+\title{\huge PhyMet^2$: complex database containing records on methanogens with unique feature (MethanoGram) allowing prediction of culture conditions based on 16S rRNA}
+
 
 \begin{frame}
 \begin{columns}
@@ -200,13 +203,16 @@
 {
 \begin{block}{Introduction}
 
-Methanogens are methane-producing anaerobic archaea, that can be found in many anaerobic habitats. They are recognized as the largest biogenic source of methane, which is a potent greenhouse gas, and consequently as an important factor in the global carbon cycle. They also show growing potential for biotechnological uses. Our rudimentary knowledge about them results from difficulties with their isolation and culturing in laboratory conditions, which are necessary to describe their phenotype. Innovations in DNA sequencing technologies allowed for rapid development of metagenomics. DNA sequencing of environmental samples resulted in identifying a plethora of new uncultivated methanogens. Therefore, we created PhyMet^2$ , the first database that combines description of methanogens and their culturing conditions with genetic information.
+Methanogens are methane-producing anaerobic archaea, that can be found in many anaerobic habitats. They are recognized as the largest biogenic source of methane, which is a potent greenhouse gas, and consequently as an important factor in the global carbon cycle. They also show growing potential for biotechnological uses.\\ 
+Our rudimentary knowledge about them results from difficulties with their isolation and culturing in laboratory conditions, which are necessary to describe their phenotype. Innovations in DNA sequencing technologies allowed for rapid development of metagenomics. DNA sequencing of environmental samples resulted in identifying a plethora of new uncultivated methanogens. \\
+Therefore, we created PhyMet^2$, the first database that combines description of methanogens and their culturing conditions with genetic information.
 
 \end{block}
 
 \begin{block}{Data collection}
 
-PhyMet2 contains 153 manually curated and up-to-date high quality records of methanogenic species. Sequence data was collected from the NCBI (www.ncbi.nlm.nih.gov) and Silva (www.arb-silva.de) databases, and additional information, according to the minimal standards \citep{boone_proposal_1988}, was obtained by thorough manual search of literature.
+PhyMet2 contains 153 manually curated and up-to-date high quality records of methanogenic species. \\
+Sequence data was collected from the NCBI (www.ncbi.nlm.nih.gov) and Silva (www.arb-silva.de) databases, and additional information, according to the minimal standards, was obtained by thorough manual search of literature.
 %\includegraphics[width=0.87\columnwidth]{static_figure/ngram_scheme_poster.eps}
 
 \end{block}
@@ -214,7 +220,7 @@ PhyMet2 contains 153 manually curated and up-to-date high quality records of met
 
 \begin{block}{PhyMet^2$ as multifunctional platform}
 \begin{figure}
-\includegraphics[width=0.8\columnwidth]{Figure1.eps}
+\includegraphics[width=0.95\columnwidth]{Figure1.eps}
 \end{figure}
 
 % \begin{knitrout}
@@ -228,9 +234,8 @@ PhyMet2 contains 153 manually curated and up-to-date high quality records of met
 % 
 % \end{knitrout}
 
-PhyMet$^2$ (Phylogeny and Metabolism of Methanogens) is the largest data analysis platform that provides information on culturing conditions and sequence data for methanogenic archaea with a user-friendly interface and a set of tools for interactive data browsing using methanogens species names, taxonomy, culturing conditions, environmental/phenotype features and nucleotide/protein sequences. The analyses include advanced data browsing, exploring phylogeny, plotting selected features, searching for potential sequence homologues and predicting key culturing conditions for newly discovered methanogens based on 16S rRNA sequences. The database contains 153 methanogens characterized by ∼50 features organized into 13 categories, 88 complete genomes, ∼200,000 protein coding nucleotide/amino-acid sequences, and ∼1,200 rRNA and ∼4,100 tRNA sequences.
+PhyMet$^2$ (Phylogeny and Metabolism of Methanogens) is the largest data analysis platform that provides information on culturing conditions and sequence data for methanogenic archaea with a user-friendly interface. The analyses include advanced data browsing, exploring phylogeny, plotting selected features, searching for potential sequence homologues and predicting key culturing conditions for newly discovered methanogens based on 16S rRNA sequences.
 
-% PhyMet^2$ is a multifunctional platform that allows for various analyses using methanogens species names, taxonomy, culturing conditions, environmental/phenotype features and nucleotide/protein sequences. The analyses include advanced data browsing, exploring phylogeny, plotting selected features, searching for potential sequence homologues and predicting key culturing conditions for newly discovered methanogens based on 16S rRNA sequences. The database contains 153 methanogens characterized by ∼50 features organized into 13 categories, 88 complete genomes, ∼200,000 protein coding nucleotide/amino-acid sequences, and ∼1,200 rRNA and ∼4,100 tRNA sequences.
 
 % \normalsize	
 % \bigskip
@@ -280,7 +285,24 @@ PhyMet$^2$ (Phylogeny and Metabolism of Methanogens) is the largest data analysi
 % 
 % \end{knitrout}
 
-From metagenomics analyses, we know that there is a plethora of new uncultivated microorganisms, including methanogens. Unfortunately, we can often cultivate much less species than actually occur in a given environment.\\ The data contained in PhyMet2 was used to develop a web server, MethanoGram, that quickly and accurately predicts the conditions for optimal growth of methanogens: temperature, pH, and NaCl concentration, i.e. the key factors that shape the composition of methanogenic communities.
+% From metagenomics analyses, we know that there is a plethora of new uncultivated microorganisms, including methanogens. Unfortunately, we can often cultivate much less species than actually occur in a given environment.\\
+The unique feature of PhyMet2 is a web server, MethanoGram, that predicts conditions for the optimal growth of methanogens: temperature, pH, NaCl concentration, and growth doubling time.
+
+% The data contained in PhyMet2 was used to develop a web server, MethanoGram, that quickly and accurately predicts the conditions for optimal growth of methanogens: temperature, pH, and NaCl concentration, i.e. the key factors that shape the composition of methanogenic communities.\\
+% MethanoGram is able to estimate:
+% 
+% \begin{multicols}{2}
+% \begin{itemize}
+% \item{growth doubling time}
+% \item{optimal growth temperature}
+% \item{optimal growth pH}
+% \item{optimal growth NaCl}
+% \end{itemize}
+% \end{multicols}
+
+% The prediction of culturing conditions is performed by the web server MethanoGram based on 16S rRNA. 
+
+MethanoGram is one of the first approaches aiming at predicting the phenotype of microorganisms based on molecular markers, and hopefully will boost further research in the field. We would also like to apply our algorithm to prediction of culturing conditions for other microorganisms.
 
 % Therefore we have created MethanoGramm which is one of first approches to predict culturing conditions of methanogens.
 
@@ -311,15 +333,14 @@ From metagenomics analyses, we know that there is a plethora of new uncultivated
 
 \begin{block}{Tuning of MethanoGram}
 
-In order to train MethanoGram, we used n-grams, i.e. subsequences of the length n that were extracted from 16S rRNA. We chose only those species that have known 16S rRNA as well as all important culturing conditions. The final set included 67 methanogens.
+In order to train MethanoGram, we used n-grams, i.e. subsequences of the length n that were extracted from 16S rRNA. We chose only those species that have known 16S rRNA as well as all important culturing conditions. 
 
 \begin{figure}
-\includegraphics[width=0.7\columnwidth]{suplem2.eps}
+\includegraphics[width=0.75\columnwidth]{suplem2.eps}
 \end{figure}
 
 
-To estimate the culturing conditions we chose the random forests algorithm because of its high performance
-and resistance to over-fitting\citep{breiman_random_2001}. They were implemented in the ranger R package\citep{wright_ranger:_2015}. In order to find the optimal values of hyperparameters, we performed a nested cross-validation of random forest classifiers.
+To estimate the culturing conditions we implemented random forests algorithm and performed a nested cross-validation.
 
 \end{block}
 % \vfill
@@ -350,6 +371,8 @@ and resistance to over-fitting\citep{breiman_random_2001}. They were implemented
 % 
 % \end{knitrout}
 
+Null model does not incorporate any sequence-based information. \\
+Values above columns represent mean error of algorithm, below show mean errors of the best predictors found in the nested cross-validation.
 
 
 \end{block}
@@ -362,10 +385,18 @@ PhyMet$^2$ is avaible at: \url{http://metanogen.biotech.uni.wroc.pl/}.
 
 \bigskip
 
-MethanoGram is avaible as a web-server: \url{http://www.smorfland.uni.wroc.pl/shiny/mgp/}.\\
+MethanoGram is avaible as a web-server: \url{http://www.smorfland.uni.wroc.pl/shiny/mgp/}.
 
-\vfill
+\bigskip
+
+The exact details on training of MethanoGram are accessible at: \url{https://github.com/michbur/PhyMet2_supplements}.
+% \vfill
+\bigskip
+
+
 \small{This work was supported by the Leading National Research Center (KNOW) and the National Science Centre grant no. 2015/17/N/NZ2/01845 and 2017/24/T/NZ2/00003.}
+\nocite{jablonski_methanogenic_2015}
+
 
 \end{block}
 \vfill
