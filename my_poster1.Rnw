@@ -92,6 +92,7 @@
 \definecolor{red4}{RGB}{227,74,51}
 \definecolor{red5}{RGB}{179,0,0}
 \definecolor{MethanoGram}{RGB}{199, 55, 163}
+\definecolor{PhyMet2}{RGB}{0, 166, 80}
 \usecolortheme{seagull}
 \useinnertheme{rectangles}
 \setbeamercolor{item projected}{bg=darkred}
@@ -145,7 +146,7 @@
 
 \begin{frame}
 \begin{columns}
-\begin{column}{.53\textwidth}
+\begin{column}{.48\textwidth}
 \begin{beamercolorbox}[center,wd=\textwidth]{postercolumn}
 \begin{minipage}[T]{.95\textwidth}
 \parbox[t][\columnheight]{\textwidth}
@@ -170,18 +171,18 @@ Sequence data was collected from the NCBI (www.ncbi.nlm.nih.gov) and Silva (www.
 
 
 \begin{block}{PhyMet^2$ as multifunctional platform}
-\vfill
-\bigskip
-\bigskip
-\bigskip
+% \vfill
+% \bigskip
+% \bigskip
+% \bigskip
 \begin{figure}
 \includegraphics[width=0.95\columnwidth]{Figure1.eps}
 \end{figure}
-\bigskip
-\bigskip
-\bigskip
-\vfill
-\\
+% \bigskip
+% \bigskip
+% \bigskip
+% \vfill
+
 % \begin{knitrout}
 % \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
 % 
@@ -276,7 +277,7 @@ MethanoGram is one of the first approaches aiming at predicting the phenotype of
 
 %new column ------------------------------------------------------    
 
-\begin{column}{.48\textwidth}
+\begin{column}{.52\textwidth}
 \begin{beamercolorbox}[center,wd=\textwidth]{postercolumn}
 \begin{minipage}[T]{.95\textwidth}  
 \parbox[t][\columnheight]{\textwidth}
@@ -297,7 +298,7 @@ MethanoGram is one of the first approaches aiming at predicting the phenotype of
 In order to train MethanoGram, we used n-grams, i.e. subsequences of the length n that were extracted from 16S rRNA and mcrA. We chose only those species that have known 16S rRNA, mcrA and all important culturing conditions. 
 
 \begin{figure}
-\includegraphics[width=0.75\columnwidth]{suplem2.eps}
+\includegraphics[width=0.77\columnwidth]{suplem2.eps}
 \end{figure}
 
 
@@ -521,10 +522,6 @@ appender <- function(string) {
   )
 }
 
-
-
-
-
 ggplot(p, aes(x = type, y = error, fill = type, label = nice_label)) +
   geom_col(width = 0.75) +
   scale_y_continuous("Mean error", expand = c(0.25, 0)) +
@@ -534,7 +531,8 @@ ggplot(p, aes(x = type, y = error, fill = type, label = nice_label)) +
   facet_wrap(~ nice, scales = "free_y", nrow = 2, 
              labeller = as_labeller(appender, default = label_parsed)) +
   theme_bw(base_size = 30) +
-  theme(legend.position = "bottom")
+  theme(legend.position = "bottom",
+        strip.background = element_rect(fill = "gold3"))
 
 
 @
@@ -567,11 +565,6 @@ PhyMet$^2$ is avaible at: \url{http://metanogen.biotech.uni.wroc.pl/}.
 MethanoGram is avaible as a web-server: \url{http://www.smorfland.uni.wroc.pl/shiny/mgp/}.
 
 \bigskip
-
-The exact details on training of MethanoGram are accessible at: \url{https://github.com/michbur/PhyMet2_supplements}.
-% \vfill
-\bigskip
-
 
 \small{This work was supported by the Leading National Research Center (KNOW) and the National Science Centre grant no. 2015/17/N/NZ2/01845 and 2017/24/T/NZ2/00003.}
 \nocite{jablonski_methanogenic_2015}
