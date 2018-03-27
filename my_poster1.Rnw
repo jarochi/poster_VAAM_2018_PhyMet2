@@ -93,6 +93,8 @@
 \definecolor{red5}{RGB}{179,0,0}
 \definecolor{MethanoGram}{RGB}{199, 55, 163}
 \definecolor{PhyMet2}{RGB}{0, 166, 80}
+\definecolor{GhostWhite}{RGB}{248, 248, 255}
+\definecolor{Lavender}{RGB}{230, 230, 250}
 \usecolortheme{seagull}
 \useinnertheme{rectangles}
 \setbeamercolor{item projected}{bg=darkred}
@@ -532,7 +534,7 @@ ggplot(p, aes(x = type, y = error, fill = type, label = nice_label)) +
              labeller = as_labeller(appender, default = label_parsed)) +
   theme_bw(base_size = 30) +
   theme(legend.position = "bottom",
-        strip.background = element_rect(fill = "gold3"))
+        strip.background = element_rect(fill = "Lavender"))
 
 
 @
