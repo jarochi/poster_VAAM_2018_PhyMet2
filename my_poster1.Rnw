@@ -153,7 +153,9 @@
 \begin{block}{Introduction}
 
 Methanogens are methane-producing anaerobic archaea, that can be found in many anaerobic habitats. They are recognized as the largest biogenic source of methane, which is a potent greenhouse gas, and consequently as an important factor in the global carbon cycle. They also show growing potential for biotechnological uses.\\ 
-Our rudimentary knowledge about them results from difficulties with their isolation and culturing in laboratory conditions, which are necessary to describe their phenotype. Innovations in DNA sequencing technologies allowed for rapid development of metagenomics. DNA sequencing of environmental samples resulted in identifying a plethora of new uncultivated methanogens. \\
+Our rudimentary knowledge about them results from difficulties with their isolation and culturing in laboratory conditions, which are necessary to describe their phenotype. 
+% Innovations in DNA sequencing 
+NGS technologies allowed for rapid development of metagenomics. DNA sequencing of environmental samples resulted in identifying a plethora of new uncultivated methanogens. \\
 Therefore, we created PhyMet^2$, the first database that combines description of methanogens and their culturing conditions with genetic information.
 
 \end{block}
@@ -168,10 +170,18 @@ Sequence data was collected from the NCBI (www.ncbi.nlm.nih.gov) and Silva (www.
 
 
 \begin{block}{PhyMet^2$ as multifunctional platform}
+\vfill
+\bigskip
+\bigskip
+\bigskip
 \begin{figure}
 \includegraphics[width=0.95\columnwidth]{Figure1.eps}
 \end{figure}
-
+\bigskip
+\bigskip
+\bigskip
+\vfill
+\\
 % \begin{knitrout}
 % \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
 % 
@@ -282,7 +292,9 @@ MethanoGram is one of the first approaches aiming at predicting the phenotype of
 
 \begin{block}{Tuning of MethanoGram}
 
-In order to train MethanoGram, we used n-grams, i.e. subsequences of the length n that were extracted from 16S rRNA. We chose only those species that have known 16S rRNA as well as all important culturing conditions. 
+% In order to train MethanoGram, we used n-grams, i.e. subsequences of the length n that were extracted from 16S rRNA. We chose only those species that have known 16S rRNA and as well as all important culturing conditions.
+
+In order to train MethanoGram, we used n-grams, i.e. subsequences of the length n that were extracted from 16S rRNA and mcrA. We chose only those species that have known 16S rRNA, mcrA and all important culturing conditions. 
 
 \begin{figure}
 \includegraphics[width=0.75\columnwidth]{suplem2.eps}
