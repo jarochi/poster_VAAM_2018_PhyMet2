@@ -134,7 +134,7 @@
 
 \date{}
 \author{\large Micha\l{} Burdukiewicz\inst{1}, Przemys\l{}aw Gagat\inst{1}, S\l{}awomir Jab\l{}o\n{}ski\inst{2}, \underline{Jaros\l{}aw Chilimoniuk}\inst{1}*, Micha\l{} Gaworski\inst{2}, \\ Pawe\l{} Mackiewicz\inst{1} and Marcin \L{}ukaszewicz\inst{2}\\
-\smallskip
+\bigskip
 \normaltext{*jaroslaw.chilimoniuk@gmail.com}}
 \institute{\small{\textsuperscript{1}University of Wroc\l{}aw, Department of Genomics,
 \textsuperscript{2}University of Wroc\l{}aw, Department of Biotransformation
